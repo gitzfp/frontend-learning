@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  .navbar {
+    width: 100%;
+    background-color: lightgray;
+    position: relative;
+    height: 50px;
+    margin-bottom: 50px;
+  }
+  .dropdown {
+    position: absolute;
+    top: 40px;
+    right: 20px;
+  }
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    border: 1px solid gray;
+    top: 25px;
+    /* right: 0; */
+  }
+  .navbar:hover .dropdown-content {
+    display: block;
+  }
+  .container {
+    width: 300px;
+    height: 200px;
+    background-color: lightgray;
+    position: relative;
+  }
+  .box1 {
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+  }
+  .box2 {
+    width: 110px;
+    height: 110px;
+    background-color: red
+  }
+</style>
+</head>
+<body>
+  <div class="navbar">
+    Navigation Bar
+    <div class="dropdown">
+      <span>Dropdown</span>
+      <div class="dropdown-content">
+        <a href="#">Option 1</a>
+        <a href="#">Option 2</a>
+        <a href="#">Option 3</a>
+      </div>
+    </div>
+  </div>
+<div class="container">
+  <div class="box1"></div>
+  <div class="box2"></div>
+</div>
+
+</body>
+</html>

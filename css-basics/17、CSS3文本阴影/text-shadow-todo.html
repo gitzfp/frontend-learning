@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本阴影-text-shadow</title>
+    <style type="text/css">
+       p {
+        text-align: center;
+        font: bold 60px helvetica, arial, sans-serif;
+        color: #333;
+       }
+       .p1 {
+        text-shadow: 4px 4px 4px #999;
+       }
+       .p2 {
+        color: white;
+        text-shadow: 2px 2px 4px red, -2px -2px 4px blue;
+       }
+       .p3 {
+        color: black;
+        width: 100%;
+        text-shadow: 0 0 10px white,  0 0 20px white, 0 0 30px white, 0 0 40px white, 0 0 50px white;;
+       }
+       .p4 {
+        color: black;
+        text-shadow: 0 0 10px orange,  0 0 20px orange, 0 0 30px orange, 0 0 40px orange, 0 0 50px orange;
+       }
+       .p5 {
+         color: white;
+         text-shadow: 2px 2px 4px gray;
+       }
+       .p6 {
+        color: white;
+        text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black;
+       }
+    </style>
+</head>
+<body>
+    <p class="p1">简单文本阴影</p>
+    <p class="p2">多色文本阴影</p>
+    <p class="p3">外发光文字</p>
+    <p class="p4">火焰文字</p>
+    <p class="p5">立体文字</p>
+    <p class="p6">描边文字</p>
+</body>
+</html>

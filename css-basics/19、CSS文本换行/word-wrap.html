@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文本换行</title>
+    <style>
+        .container {
+            width: 150px;
+            border: 1px solid black;
+            padding: 10px;
+        }
+        
+        .normal {
+            word-wrap: normal;
+            white-space: normal;
+        }
+        
+        .break-word {
+            word-wrap: break-word;
+        }
+        
+        .break-all {
+            word-break: break-all;
+        }
+        
+        .keep-all {
+            word-break: keep-all;
+        }
+        
+        .nowrap {
+            white-space: nowrap;
+        }
+        
+        .pre {
+            white-space: pre;
+        }
+        
+        .pre-wrap {
+            white-space: pre-wrap;
+        }
+        
+        .pre-line {
+            white-space: pre-line;
+        }
+    </style>
+</head>
+
+<body>
+    <p class="container normal">This is a longwordwithoutanyspacesanditcannotbebroken</p>
+    <p class="container break-word">This is a longwordwithoutanyspacesanditcannotbebroken</p>
+    <div class="container break-all">
+        This is a longwordwithoutanyspacesanditwillbreak.
+    </div>
+
+    <div class="container keep-all">
+        这是一个很长的中文单词，不会在字符之间断行。
+    </div>
+
+    <div>======以下是white-space的用法================</div>
+
+    <div class="container normal">
+        This is a long text that will wrap when it reaches the container's width.
+    </div>
+
+    <div class="container nowrap">
+        This is a long text that will not wrap and will overflow the container.
+    </div>
+
+    <div class="container pre">
+        This is a long text with multiple lines that will be displayed exactly as it is in the source code.
+    </div>
+
+    <div class="container pre-wrap">
+        This is a long text with multiple lines that will wrap when it reaches the container's width.
+    </div>
+
+    <div class="container pre-line">
+        This is a long text with multiple lines that will wrap when it reaches the container's width, but consecutive white spaces will be collapsed into one space.
+    </div>
+
+</body>
+
+</html>

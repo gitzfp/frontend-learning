@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 100px;
+            /* 调用动画*/
+            /* animation: 动画名称 持续时间  执行次数  是否反向  运动曲线 延迟执行 */
+            /* animation: move1 1s 3 alternate linear 1s; */
+            animation: move2 6s ease-in-out;
+        }
+
+        /* 方式一：定义一组动画*/
+        @keyframes move1 {
+            from {
+                transform: translateX(0px) 
+            }
+            to {
+                transform: translateX(500px) 
+            }
+        }
+
+        /* 方式二：定义多组动画*/
+        @keyframes move2 {
+            0% {
+                transform: translateX(0px) translateY(0px);
+            }
+            /*动画执行到 25% 的时候，角度向下旋转90*/
+            25% {
+                transform: translateX(500px) translateY(0px) rotate(90deg);
+            }
+
+            50% {
+                transform: translateX(500px) translateY(500px) rotate(90deg);
+            }
+
+            75% {
+                transform: translateX(0px) translateY(500px) rotate(180deg);;
+            }
+
+            100% {
+                /*坐标归零，表示回到原点。*/
+                transform: translateX(0px) translateY(0px) rotate(270deg);
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+<img class="box" alt="fish" src="images/3.jpeg"/>
+</body>
+</html>

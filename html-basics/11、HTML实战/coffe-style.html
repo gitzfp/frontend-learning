@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>咖啡店菜单和促销信息</title>
+    <style>
+        /* 页面背景颜色 */
+        
+        body {
+            background-color: #f2f2f2;
+        }
+        /* 整体布局 */
+        
+        #total {
+            margin: 0 auto;
+            max-width: 800px;
+            padding: 20px;
+        }
+        /* 标题样式 */
+        
+        h1 {
+            color: #964b00;
+            text-align: center;
+            font-size: 40px;
+            margin-bottom: 30px;
+        }
+        /* 图像样式 */
+        
+        img {
+            display: block;
+            margin: 0 auto;
+            width: 800px;
+            height: auto;
+            margin-bottom: 30px;
+        }
+        /* 咖啡菜单样式 */
+        
+        h2 {
+            color: #964b00;
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+        
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        /* 促销信息样式 */
+        
+        span {
+            display: block;
+            color: #964b00;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        /* 链接样式 */
+        
+        a {
+            color: #964b00;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        /* 表单样式 */
+        
+        form {
+            margin-top: 30px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: none;
+            background-color: #fff;
+            box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        input[type="submit"] {
+            background-color: #964b00;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #61380b;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="total">
+        <h1>欢迎来到 Java Express 咖啡店！</h1>
+        <img src="./coffe.jpg" alt="">
+        <p>我们提供各种咖啡，以下是我们的菜单：</p>
+        <div>
+            <h2>咖啡</h2>
+            <ul>
+                <li>美式咖啡</li>
+                <li>拿铁</li>
+                <li>卡布奇诺</li>
+                <li>摩卡</li>
+            </ul>
+        </div>
+        <p>我们现在有以下促销信息：</p>
+        <span>买一送一，限时优惠！</span>
+        <p>如果您想了解更多信息，请<a href="http://www.baidu.com" target="_blank">点击这里</a>联系我们。</p>
+        <form>
+            <label for="name">姓名：</label>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">邮箱：</label>
+            <input type="email" id="email" name="email"><br>
+            <label for="message">留言：</label>
+            <textarea id="message" name="message"></textarea><br>
+
+            <br>
+            <input type="submit" value="提交留言">
+        </form>
+    </div>
+</body>
+
+</html>

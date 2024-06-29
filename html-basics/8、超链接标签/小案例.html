@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>瞄点链接示例</title>
+    <style>
+        /* 用于演示的样式 */
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        
+        .section {
+            height: 500px;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+            background-color: #f2f2f2;
+        }
+        
+        .section h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li id="top">
+                <a href="http://www.baidu.com" target="_blank">外部链接：去百度一下</a>
+            </li>
+            <li>
+                <a href="about.html" target="_self">内部链接：关于我们</a>
+            </li>
+            <li>
+                <a href="直播.zip" target="_self">下载链接：下载zip文件</a>
+            </li>
+            <li>
+                <a href="超链接标签.pdf" target="_blank">下载链接：下载pdf文件</a>
+            </li>
+            <li>
+                <a href="#section1">瞄点链接：跳转到第一节</a>
+            </li>
+            <li>
+                <a href="#section3">瞄点链接：跳转到第三节</a>
+            </li>
+            <li>
+                <a href="#">空链接：点击我</a>
+            </li>
+            <li>
+                <a href="http://www.baidu.com">
+                    <img src="product.png" width="30" height="30" />
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <div class="section" id="section1">
+        <h2>第一节</h2>
+        <p>这是第一节的内容</p>
+    </div>
+
+    <div class="section" id="section2">
+        <h2>第二节</h2>
+        <p>这是第二节的内容</p>
+    </div>
+
+    <div class="section" id="section3">
+        <h2>第三节</h2>
+        <p>这是第三节的内容</p>
+        <a href="#top">瞄点链接：跳到顶部</a>
+    </div>
+</body>
+
+</html>

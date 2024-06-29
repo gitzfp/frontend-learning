@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>注册页面</title>
+</head>
+
+<body>
+    <form action="http://www.baidu.com" method="post">
+        <label for="username">用户名：</label>
+        <input type="text" name="username" value="" id="username" placeholder="zhangsan">
+        <br><label for="password">密码：</label>
+        <input type="password" name="password" id="password" value="" placeholder="请输入密码" required>
+        <br> 性别：
+        <input type="radio" name="sex" value="男" id="man">
+        <label for="man">男生</label>
+        <input type="radio" name="sex" vlaue="女" id="woman">
+        <label for="woman">女生</label>
+        <br> 兴趣爱好：
+        <input type="checkbox" name="hobby" value="basketball">篮球
+        <input type="checkbox" name="hobby" value="footerball">足球
+        <input type="checkbox" name="hobby" value="swim" checked>游泳
+        <br>喜欢的水果：
+        <select name="fruit" id="fruit-d" multiple>
+            <option value="apple" selected>Apple</option>
+            <option value="banana" selected>Banana</option>
+            <option value="orange" selected>Orange</option>
+        </select>
+        <br>留言：
+        <textarea name="message" id="message-id" cols="10" rows="2">
+            我爱中国
+        </textarea>
+        <br>
+        <input type="submit" value="input提交">
+        <input type="reset" value="input重置">
+        <button type="submit">button提交</button>
+        <button type="reset">button重置</button>
+    </form>
+
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>伪类样式</title>
+    <style>
+        ul li:first-child {
+            color: red;
+        }
+        ul li:nth-child(2) {
+            color: orange;
+        }
+        li:last-of-type {
+            color: blue;
+        }
+        .fancy-button:hover {
+            background-color: #45a049; /* 鼠标悬停时变色 */
+        }
+        .fancy-button:active {
+            background-color: orange;
+        }
+        .input-field:focus {
+            background-color: yellow; /* 鼠标悬停时变色 */
+        }
+        a:link {
+            color:blueviolet
+        }
+        a:visited {
+            color: gray;
+        }
+        .image-container img {
+            width: 100%;
+            transition: transform 0.3s ease-in-out; /* 过渡效果 */
+        }
+
+        .image-container img:hover {
+            transform: scale(1.1); /* 鼠标悬停时放大 */
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>列表项 1</li>
+        <li>列表项 2</li>
+        <li>列表项 3</li>
+        <li>列表项 4</li>
+    </ul>
+    <div class="image-container">
+        <img src="images/img/lyf1.jpg" style="width:100px" alt="Image 1">
+        <img src="images/img/lyf2.jpg" style="width:100px" alt="Image 2">
+        <!-- 更多图片 -->
+    </div>
+    <button class="fancy-button">悬停我</button>
+    <input type="text" class="input-field" placeholder="在此输入...">
+    <a class="alink-setting" href="https://biying.com">访问我</a>
+</body>
+</html>

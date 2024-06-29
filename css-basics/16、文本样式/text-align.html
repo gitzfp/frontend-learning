@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>文本样式</title>
+<style>
+  .container {
+    width: 200px;
+    height: 100px;
+    border: 1px solid #000;
+  }
+  .left-align {
+    text-align: left;
+    line-height: 102px;
+  }
+  .right-align {
+    text-align: right;
+    text-decoration: overline;
+  }
+  .center-align {
+    text-align: center;
+    text-decoration: line-through;
+    line-height: 102px;
+  }
+  .justify-align {
+    text-align: justify;
+  }
+  p {
+    margin: 0px;
+  }
+
+</style>
+</head>
+<body>
+  <div class="container left-align">
+    <p>This is left-aligned text.</p>
+  </div>
+
+  <div class="container right-align">
+    <p>This is right-aligned text.</p>
+  </div>
+
+  <div class="container center-align">
+    <p>This is center-aligned text.</p>
+  </div>
+
+  <div class="container justify-align">
+    <p>
+      This paragraph will have extra space added between words to align both left and right.
+    </p>
+  </div>
+</body>
+</html>
+
