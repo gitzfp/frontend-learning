@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>常量和变量</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var c;
+        console.log('整数常量：',123)
+        console.log('浮点数常量:',3.14)
+        console.log('字符串常量，带字母：','123aa')
+        console.log('字符串常量，带中文:',"圆周率3.14bb")
+        const a = false;
+        const website = 'http://www.example.com'
+        const number = 123
+        if(a){
+            console.log('这是真的',website, number)
+        }else{
+            console.log('这是假的',website, number)
+        }
+        // number = 456
+        let name;
+        name = "zhangsan"
+        console.log("名字是:", name)
+        name = "李四"
+        console.log("改名之后:", name)
+
+        var a1 = 1;
+        function test() {
+            var a2 = 2
+            console.log("a1 = ", a1, "a2 = ", a2); // 输出: 1
+        }
+        console.log(a1);
+        // console.log(a2); // 报错: b is not defined
+        test();
+        
+        {
+            c = 3;
+            let d = 4;
+            console.log(c); // 输出: 3
+            console.log(d); // 输出: 4
+        }
+        console.log('c的值', c); // 报错: c is not defined
+        console.log('d的值,', d); // 报错: d is not defined
+        console.log('e的值是:', e); // 输出: undefined
+        var e = 5;
+        console.log(e); // 输出: 5
+        var num1 = 10;
+        var num2 = num1;
+        console.log(num1, num2); // 10
+
+        var c1 = 200;
+        console.log(c1)
+    </script>
+</body>
+</html>
