@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>事件响应</title>
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+</head>
+<body>
+  <div id="root"></div>
+  <!-- React 和 ReactDOM：通过 <script> 标签从 CDN 引入 React 和 ReactDOM。
+	Babel：通过 Babel Standalone，在浏览器中直接将 JSX 转换成 JavaScript。
+    我们使用 type="text/babel" 来标记 Babel 需要转换的部分。-->
+  <script type="text/babel">
+    function App() {
+      const handleUploadClick = () => {
+        console.log('handleUploadClick')
+      }
+      return <div onClick={() => {
+        console.log('事件传递到了App组件的div标签')
+      }}>
+        我是App组件
+        <FirstButton />
+        <SecondButton />
+        <ThirdButton />
+        <FouthButton />
+        <TextInput />
+        <Button uploadClick={handleUploadClick}/>
+      </div>;
+    }
+    function Button({uploadClick}) {
+      function handleClick(e) {
+        console.log('点击了子组件');
+        // e.stopPropagation()
+        uploadClick()
+      }
+      return (
+        <button onClick={handleClick}>
+          点我
+        </button>
+      );
+    }
+    function FirstButton() {
+      function handleClick() {
+        alert('使用组件内定义的函数');
+      }
+      return (
+        <button onClick={() => handleClick()}>
+          使用组件内定义的函数
+        </button>
+      );
+    }
+    function SecondButton() {
+      function handleClick() {
+        alert('使用内联函数');
+      }
+      return (
+        <button onClick={handleClick}>
+          使用内联函数
+        </button>
+      );
+    }
+     function ThirdButton() {
+      return (
+        <button onClick={() => {
+           alert('使用箭头函数'); 
+        }}>
+          使用箭头函数
+        </button>
+      );
+    }
+    function FouthButton() {
+      return <img
+        src="example.jpg"
+        alt="示例图片"
+        onMouseEnter={() => alert('这是一个工具提示！')}
+      />
+    }
+    function TextInput() {
+      return (
+        <input
+          type="text"
+          onChange={(e) => console.log('文本变化：'+e.target.value)}
+        />
+      );
+    }
+    ReactDOM.render(<App />, document.getElementById('root'));
+  </script>
+</body>
+</html>
